@@ -73,29 +73,65 @@ public void testGetDepth() {
 
 @Test
 public void testRecArea() {
-  
+  Area instance = new areaRec();
+  double area=10;
+  instance.Rectangle(2,5);
+  double area1 = instance.areaRec(2,5);
+  assertEquals(area, area1);
 }
 
 @Test
 public void testCubArea() {
+  Area instance = new areaCub();
+  double area=34;
+  instance.Cuboid(2,5,1);
+  double area1 = instance.areaCub(2,5,1);
+  assertEquals(area, area1);
 }
 
 @Test
 public void testRecPerimeter() {
+  Perimeter instance = new perimeterRec();
+  double perimeter=14;
+  instance.Rectangle(2,5);
+  double perimeter1 = instance.perimeterRec(2,5);
+  assertEquals(perimeter, perimeter1);
 }
 
 @Test
 public void testCubPerimeter() {
+  Perimeter instance = new perimeterCub();
+  double perimeter=10;
+  instance.Cuboid(2,5,1);
+  double perimeter1 = instance.perimeterCub(2,5,1);
+  assertEquals(perimeter, perimeter1);
 }
 
 @Test
-public void testCompareTo(Rectangle a, Rectangle b) {
+public static void assertCompareTo(Rectangle a, Rectangle b) {
+  assertEquals(0,a.compareTo(b));
 }
 
 @Test
-public void testSortByArea() {
+public void testSortByAreaR() {
+  Double[] arr={20,14,30};
+  Double[] exp={14,20,30};
+  SortByAreaR(arr);
+  assertArrayEquals(exp,arr);
+}
+
+@Test
+public void testSortByAreaC() {
+  Double[] arr1={20,14,30};
+  Double[] exp1={14,20,30};
+  SortByAreaC(arr1);
+  assertArrayEquals(exp1,arr1);
 }
 
 @Test
 public void testSortByVolume() {
+  Double[] arr2={20,14,30};
+  Double[] exp2={14,20,30};
+  SortByVolumeC(arr2);
+  assertArrayEquals(exp2,arr2);
 }
