@@ -28,12 +28,12 @@ abstract class shape{
    }
 
    @Override
-   public double area() {
+   public double areaRec() {
       return width*length;
    }
 
    @Override
-   public double perimeter() {
+   public double perimeterRec() {
      return 2*(width+length);
    }
    class SortByAreaR() implements Comparator<Rectangle> {
@@ -59,27 +59,27 @@ abstract class shape{
       new depth = depth;
      }
      
-     public double volume() {
+     public double volumeCub() {
         return width*length*depth;
      }
      
      @Override
-     public double area() {
+     public double areaCub() {
         return 2*length*width + 2*length*depth + 2*depth*width
      }
      
      @Override
-     public double perimeter () {
+     public double perimeterCub() {
         return 4*(length + width + depth)
      }
      
-     class SortByArea() implements Comparator<Cuboid> {
+     class SortByAreaC() implements Comparator<Cuboid> {
         public int compare(Cuboid a, Cuboid b) {
             return a.area.compareTo(b.area);
         }
      }
      
-     class SortByVolume() implements Comparator<Cuboid> {
+     class SortByVolumeC() implements Comparator<Cuboid> {
         public int compare(Cuboid a, Cuboid b) {
             return a.volume.compareTo(b.volume);
         }
