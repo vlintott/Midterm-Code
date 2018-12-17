@@ -20,27 +20,52 @@ public void testSetLength() {
   System.out.println("setLength");
   int length= 1;
   Length instance = new length();
-  instance.get
+  assertEquals(instance.getLength(), length));
 }
 @Test
-public void testSetLength() {
-
-}
-
-@Test
-public void testGetWidth() {
+public void testGetLength() {
+  System.out.println("getLength");
+  Length instance = new length();
+  int length1=1;
+  instance.setLength(1);
+  int len = instance.getLength();
+  assertEquals(length1, len);
 }
 
 @Test
 public void testSetWidth() {
+  System.out.println("setWidth");
+  int width= 2;
+  Width instance = new width();
+  assertEquals(instance.getWidth(), width));
 }
 
 @Test
-public void testGetDepth() {
+public void testGetWidth() {
+  System.out.println("getWidth");
+  Width instance = new width();
+  int width1=2;
+  instance.setWidth(2);
+  int wid = instance.getWidth();
+  assertEquals(width1, wid);
 }
 
 @Test
 public void testSetDepth() {
+  System.out.println("setDepth");
+  int depth= 3;
+  Depth instance = new depth();
+  assertEquals(instance.getDepth(), depth));
+}
+
+@Test
+public void testGetDepth() {
+  System.out.println("getDepth");
+  Depth instance = new depth();
+  int depth1=3;
+  instance.getDepth(3);
+  int dep = instance.getDepth();
+  assertEquals(depth1, dep);
 }
 
 @Test
