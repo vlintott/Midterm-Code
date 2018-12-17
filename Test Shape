@@ -1,0 +1,72 @@
+@Test
+public class TestShape{
+  public static void main(String[] args) {
+    double width=2;
+    double length =3;
+    Shape rectangle = new Rectangle(width,length);
+    assertTrue(rectangle.Shape());
+  }
+  public static void main(String[] args) {
+    double width=2;
+    double length=3;
+    double depth=4;
+    Shape cuboid = new Cuboid(width,length,depth);
+    assertTrue(cuboid.Shape());
+  }
+}
+
+@Test 
+public void testSetLength() {
+  System.out.println("setLength");
+  int length= 1;
+  Length instance = new length();
+  instance.get
+}
+@Test
+public void testSetLength() {
+
+}
+
+@Test
+public void testGetWidth() {
+}
+
+@Test
+public void testSetWidth() {
+}
+
+@Test
+public void testGetDepth() {
+}
+
+@Test
+public void testSetDepth() {
+}
+
+@Test
+public void testRecArea() {
+}
+
+@Test
+public void testCubArea() {
+}
+
+@Test
+public void testRecPerimeter() {
+}
+
+@Test
+public void testCubPerimeter() {
+}
+
+@Test
+public void testCompareTo(Rectangle a, Rectangle b) {
+}
+
+@Test
+public void testSortByArea() {
+}
+
+@Test
+public void testSortByVolume() {
+}
