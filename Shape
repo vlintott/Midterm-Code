@@ -1,0 +1,90 @@
+abstract class shape{
+  private int a;
+  private int b;
+  public abstract double area();
+  public abstract double perimeter();
+  
+  
+  public class Rectangle extends Shape{
+    private int width;
+    private int length;
+  
+    public Rectangle(int width, int length) {
+     this.width = width;
+     this.length = length;
+   }
+   int getWidth() {
+      return width;
+   }
+   void setWidth(int length) {
+      new width= width;
+   }
+  
+   int getLength() {
+      return length;
+   }
+   void setLength(int length) {
+     new length = length;
+   }
+
+   @Override
+   public double area() {
+      return width*length;
+   }
+
+   @Override
+   public double perimeter() {
+     return 2*(width+length);
+   }
+   class SortByAreaR() implements Comparator<Rectangle> {
+        public int compare(Rectangle a, Rectangle b) {
+            return a.area.compareTo(b.area);
+        }
+   }
+  
+   public class Cuboid extends Rectangle{
+      private int depth;
+    
+      public cuboid(int width,int length, int depth) {
+       this.width = width;
+       this.length = length;
+       this.depth = depth;
+     }
+  
+     int getDepth() {
+       return depth;
+     }
+  
+     void setDepth(int depth) {
+      new depth = depth;
+     }
+     
+     public double volume() {
+        return width*length*depth;
+     }
+     
+     @Override
+     public double area() {
+        return 2*length*width + 2*length*depth + 2*depth*width
+     }
+     
+     @Override
+     public double perimeter () {
+        return 4*(length + width + depth)
+     }
+     
+     class SortByArea() implements Comparator<Cuboid> {
+        public int compare(Cuboid a, Cuboid b) {
+            return a.area.compareTo(b.area);
+        }
+     }
+     
+     class SortByVolume() implements Comparator<Cuboid> {
+        public int compare(Cuboid a, Cuboid b) {
+            return a.volume.compareTo(b.volume);
+        }
+     }
+  }
+  
+  publicdouble
+}
